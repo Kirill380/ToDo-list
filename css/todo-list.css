@@ -2,6 +2,7 @@
 .todo-list {
     margin: 0 auto;
     width: 650px;
+    font-family: Tahoma, serif;
 }
 
 .todo-list__item {
@@ -25,7 +26,9 @@
     width: 83%;
     padding: 5px;
     vertical-align: middle;
-
+    color: #777;
+    font-weight: bold;
+    font-size: 16px;
     /*TODO figure out with vertical align for text*/
     line-height: 3em;
     display: inline-block;
@@ -81,4 +84,18 @@
     border:1px solid #BBB;
     border-radius: 5px;
     text-align: center;
+}
+
+.add-form__button:active {
+    background-color: #555;
+    color: #FFF;
+}
+
+/*utils*/
+.hidden {
+    display: none;
+}
+
+.done-item {
+    text-decoration: line-through;
 }

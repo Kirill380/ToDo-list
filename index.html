@@ -10,79 +10,37 @@
 <body>
 <div class="todo-list">
 
-    <div class="todo-list__item">
+    <div class="todo-list__item todo-list__item_control">
         <div class="add-form__field">
             <input type="text" name="search" placeholder="Search.."/>
         </div>
     </div>
 
-    <div class="todo-list__item">
+    <!--TODO generate first item from js-->
+    <div class="todo-list__item hidden jsHead">
         <div class="item">
             <div class="item__checkbox">
                 <input type="checkbox"/>
             </div>
-            <div class="item__content">
-                React.js
-            </div>
-            <div class="item__remove">
-                <span class="fa fa-times-circle-o"></span>
-            </div>
+            <div class="item__content"></div>
+            <div class="item__remove"></div>
         </div>
     </div>
 
-    <div class="todo-list__item">
-        <div class="item">
-            <div class="item__checkbox">
-                <input type="checkbox"/>
-            </div>
-            <div class="item__content">
-                Semantic-UI
-            </div>
-            <div class="item__remove">
-                <span class="fa fa-times-circle-o"></span>
-            </div>
-        </div>
-    </div>
 
-    <div class="todo-list__item">
-        <div class="item">
-            <div class="item__checkbox">
-                <input type="checkbox"/>
-            </div>
-            <div class="item__content">
-                Coffeescript
-            </div>
-            <div class="item__remove">
-                <span class="fa fa-times-circle-o"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="todo-list__item">
-        <div class="item">
-            <div class="item__checkbox">
-                <input type="checkbox"/>
-            </div>
-            <div class="item__content">
-               Rails
-            </div>
-            <div class="item__remove">
-                <span class="fa fa-times-circle-o"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="todo-list__item">
+    <div class="todo-list__item todo-list__item todo-list__item_control">
         <div class="add-form__field">
-            <input type="text" name="add" placeholder="Add.."/>
+            <input class="jsAddField" type="text" name="add" placeholder="Add.."/>
         </div>
-        <div class="add-form__button">Add</div>
+        <div class="add-form__button jsAdd">Add</div>
     </div>
 
 </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="./js/jade.min.js"></script>
+<script src="./js/TodoController.js"></script>
 </body>
 </html>
