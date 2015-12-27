@@ -1,0 +1,84 @@
+/*TODO separate diff styles to files*/
+.todo-list {
+    margin: 0 auto;
+    width: 650px;
+}
+
+.todo-list__item {
+    border: 1px solid #DDD;
+    width: 650px;
+    height: 60px;
+}
+
+
+/*todo list item*/
+
+.item__checkbox {
+    padding: 5px;
+    width: 5%;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+}
+
+.item__content {
+    width: 83%;
+    padding: 5px;
+    vertical-align: middle;
+
+    /*TODO figure out with vertical align for text*/
+    line-height: 3em;
+    display: inline-block;
+}
+
+.item__remove {
+    width:5%;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.item__remove span  {
+    color: #ce150e;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 22px;
+}
+.item:hover .item__remove {
+    display: inline-block;
+}
+
+
+/*search*/
+
+
+
+/*add form*/
+
+
+.add-form__field {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.add-form__field input {
+    width: 500px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.add-form__button {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    width:80px;
+    padding: 5px;
+    height: 20px;
+    border:1px solid #BBB;
+    border-radius: 5px;
+    text-align: center;
+}
