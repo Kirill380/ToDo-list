@@ -1,4 +1,5 @@
 /*TODO separate diff styles to files*/
+/*TODO rename add form class*/
 .todo-list {
     margin: 0 auto;
     width: 650px;
@@ -14,6 +15,10 @@
 
 .todo-list__item:first-child {
     border: 1px solid #DDD;
+}
+
+.todo-list__item_control {
+    padding: 10px;
 }
 
 /*todo list item*/
@@ -66,25 +71,27 @@
 
 .add-form__field {
     display: inline-block;
-    margin: 5px;
-    padding: 5px;
 }
 
 
 .add-form__field input {
     width: 500px;
-    height: 20px;
     border-radius: 5px;
     padding: 5px;
+}
+
+.add-form__field.add-form__field_large {
+    width: 100%;
+}
+
+.add-form__field.add-form__field_large input {
+    width: 100%;
 }
 
 .add-form__button {
     cursor: pointer;
     display: inline-block;
-    margin: 5px;
     width:80px;
-    padding: 5px;
-    height: 20px;
     border:1px solid #BBB;
     border-radius: 5px;
     text-align: center;

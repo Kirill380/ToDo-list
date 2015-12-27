@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <title>Todo list</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
     <link rel="stylesheet" href="./css/todo-list.css"/>
 </head>
 <body>
 <div class="todo-list">
 
     <div class="todo-list__item todo-list__item_control">
-        <div class="add-form__field">
-            <input class="jsFieldSearch" type="text" name="search" placeholder="Search.."/>
+        <div class="add-form__field add-form__field_large">
+            <input class="form-control jsFieldSearch" type="text" name="search" placeholder="Search"/>
         </div>
     </div>
 
@@ -30,9 +31,9 @@
 
     <div class="todo-list__item todo-list__item todo-list__item_control">
         <div class="add-form__field">
-            <input class="jsAddField" type="text" name="add" placeholder="Add.."/>
+            <input class="form-control jsAddField" type="text" name="add" placeholder="Task"/>
         </div>
-        <div class="add-form__button jsAdd">Add</div>
+        <div class="btn btn-success add-form__button jsAdd">Add</div>
     </div>
 
 </div>
