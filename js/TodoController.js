@@ -3,8 +3,8 @@
         var container = $(".todo-list");
         var addBtn = container.find(".jsAdd");
         var addField = container.find(".jsAddField");
-        var head = container.find(".jsHead");
         var search = container.find(".jsFieldSearch");
+        var itemHolder= container.find(".todo-list__task-container");
 
         //TODO use jade
         var content = '<table class="todo-list__item">\
@@ -34,32 +34,25 @@
 
 
         function addNewItem() {
-            var item = addField.val();
+            var name = addField.val();
             addField.val("");
 
-            if(_.isEmpty(item)) {
+            if(_.isEmpty(name)) {
                 console.log("nothing to add");
                 return;
             }
 
-            var html = tpl({title : item});
-            head.after(html);
-            head.removeClass("jsHead");
-            head = head.next();
-            head.addClass("jsHead");
+            var html = tpl({title : name});
+            itemHolder.append(html);
+            var newItem = itemHolder.last();
 
             //add event handlers
-            head.find(".item__remove").on("click", function () {
-                //TODO think about better solution
+            newItem.find(".item__remove").on("click", function () {
                 var $item = $(this).closest( "table" );
-                if($item.hasClass("jsHead")) {
-                    head = $item.prev();
-                    head.addClass("jsHead");
-                }
                 $item.remove();
             });
 
-            head.find(".item__checkbox").on("change", function() {
+            newItem.find(".item__checkbox").on("change", function() {
                 var $item = $(this).parent();
                 $item.find(".item__content").toggleClass("done-item", this.checked);
             });
@@ -71,9 +64,6 @@
 
             items.find(".item__content").each(function(i, content) {
                 var $content = $(content);
-
-                if($content.closest( "table" ).attr('id') == "init")
-                    return;
 
                 if($content.text().indexOf(word) == -1)
                     $content.closest( "table" ).addClass("hidden");
