@@ -25,14 +25,14 @@
 
 .item__checkbox {
     padding: 5px;
-    width: 5%;
+    width: 15%;
     vertical-align: middle;
     text-align: center;
     display: inline-block;
 }
 
 .item__content {
-    width: 83%;
+    width: 80%;
     padding: 5px;
     vertical-align: middle;
     color: #777;
@@ -48,16 +48,19 @@
     height: 50px;
     padding: 5px;
     cursor: pointer;
-    display: none;
 }
+
+
 
 .item__remove span  {
     color: #ce150e;
     vertical-align: middle;
     text-align: center;
     font-size: 22px;
+    display: none;
 }
-.item:hover .item__remove {
+
+.item:hover .item__remove  span{
     display: inline-block;
 }
 

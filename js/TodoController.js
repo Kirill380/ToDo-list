@@ -7,19 +7,19 @@
         var search = container.find(".jsFieldSearch");
 
         //TODO use jade
-        var content = '<div class="todo-list__item">\
-                       <div class="item">\
-                            <div class="item__checkbox">\
+        var content = '<table class="todo-list__item">\
+                       <tr class="item">\
+                            <td class="item__checkbox">\
                                 <input type="checkbox"/>\
-                            </div>\
-                            <div class="item__content">\
+                            </td>\
+                            <td class="item__content">\
                                 <%= title%>\
-                            </div>\
-                            <div class="item__remove">\
+                            </td>\
+                            <td class="item__remove">\
                                 <span class="fa fa-times-circle-o"></span>\
-                            </div>\
-                        </div>\
-                    </div>';
+                            </td>\
+                        </tr>\
+                    </table>';
 
         var tpl = _.template(content);
 
@@ -51,7 +51,7 @@
             //add event handlers
             head.find(".item__remove").on("click", function () {
                 //TODO think about better solution
-                var $item = $(this).parent().parent();
+                var $item = $(this).closest( "table" );
                 if($item.hasClass("jsHead")) {
                     head = $item.prev();
                     head.addClass("jsHead");
@@ -65,20 +65,20 @@
             });
         }
 
-        search.on("keydown", function(e) {
+        search.on("keyup", function(e) {
             var word = this.value;
             var items = container.find(".todo-list__item:not(.todo-list__item_control)");
 
             items.find(".item__content").each(function(i, content) {
                 var $content = $(content);
 
-                if($content.parent().parent().attr('id') == "init")
+                if($content.closest( "table" ).attr('id') == "init")
                     return;
 
                 if($content.text().indexOf(word) == -1)
-                    $content.parent().parent().addClass("hidden");
+                    $content.closest( "table" ).addClass("hidden");
                 else
-                    $content.parent().parent().removeClass("hidden");
+                    $content.closest( "table" ).removeClass("hidden");
             })
         });
     });

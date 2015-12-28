@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.css"/>
     <link rel="stylesheet" href="./css/todo-list.css"/>
+
 </head>
 <body>
 <div class="todo-list">
@@ -18,23 +19,28 @@
     </div>
 
     <!--TODO generate first item from js-->
-    <div id="init" class="todo-list__item hidden jsHead">
-        <div class="item">
-            <div class="item__checkbox">
+    <table id="init" class="todo-list__item hidden jsHead">
+        <tr class="item">
+            <td class="item__checkbox">
                 <input type="checkbox"/>
-            </div>
-            <div class="item__content"></div>
-            <div class="item__remove"></div>
-        </div>
-    </div>
+            </td>
+            <td class="item__content"></td>
+            <td class="item__remove"></td>
+        </tr>
+    </table>
 
 
     <div class="todo-list__item todo-list__item todo-list__item_control">
-        <div class="add-form__field">
-            <input class="form-control jsAddField" type="text" name="add" placeholder="Task"/>
+
+        <div class="input-group">
+            <input type="text" class="form-control jsAddField" name="add" placeholder="Task">
+            <div class="input-group-btn">
+                <div class="btn btn-success add-form__button jsAdd">Add</div>
+            </div>
         </div>
-        <div class="btn btn-success add-form__button jsAdd">Add</div>
+
     </div>
+
 
 </div>
 
